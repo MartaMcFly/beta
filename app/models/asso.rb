@@ -5,7 +5,7 @@ class Asso < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
 has_many :benevoles
-has_many :created_missions, class_name: "Missions", foreign_key: "assos_id", dependent: :destroy
+has_many :created_missions, class_name: "Mission", foreign_key: "assos_id", dependent: :destroy
 
 validates :nom, presence: true
 validates :code_postal, presence: true

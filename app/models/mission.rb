@@ -1,5 +1,5 @@
 class Mission < ApplicationRecord
-belongs_to :creator, class_name: "Assos", foreign_key: "mission_id"
+belongs_to :creator, class_name: "Asso", foreign_key: "mission_id"
 has_many :benevoles
 
 validates :nom, presence: true
