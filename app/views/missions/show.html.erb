@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @mission.nom %>
+</p>
+
+<p>
+  <strong>Date debut:</strong>
+  <%= @mission.date_debut %>
+</p>
+
+<p>
+  <strong>Date fin:</strong>
+  <%= @mission.date_fin %>
+</p>
+
+<p>
+  <strong>Lieu:</strong>
+  <%= @mission.lieu %>
+</p>
+
+<p>
+  <strong>Descriptif:</strong>
+  <%= @mission.descriptif %>
+</p>
+
+<p>
+  <strong>Objectifs:</strong>
+  <%= @mission.objectifs %>
+</p>
+
+<p>
+  <strong>Competences:</strong>
+  <%= @mission.competences %>
+</p>
+
+<%= link_to 'Edit', edit_mission_path(@mission) %> |
+<%= link_to 'Back', missions_path %>
