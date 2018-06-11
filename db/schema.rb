@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_06_171232) do
+ActiveRecord::Schema.define(version: 2018_06_06_163624) do
 
   create_table "assos", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -66,8 +66,10 @@ ActiveRecord::Schema.define(version: 2018_06_06_171232) do
     t.string "descriptif"
     t.string "objectifs"
     t.string "competences"
+    t.integer "asso_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["asso_id"], name: "index_missions_on_asso_id"
   end
 
 end

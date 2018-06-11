@@ -8,6 +8,7 @@ class CreateMissions < ActiveRecord::Migration[5.2]
       t.string :descriptif
       t.string :objectifs
       t.string :competences
+      t.belongs_to :asso , index: true
 
       t.timestamps
     end
