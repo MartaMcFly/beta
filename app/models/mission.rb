@@ -1,6 +1,7 @@
 class Mission < ApplicationRecord
 belongs_to :asso
 has_many :benevoles
+belongs_to :creator, class_name: "Asso", foreign_key: "asso_id"
 
 validates :nom, presence: true
 validates :date_debut, presence: true

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_06_163624) do
+ActiveRecord::Schema.define(version: 2018_06_13_102220) do
 
   create_table "assos", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -56,6 +56,13 @@ ActiveRecord::Schema.define(version: 2018_06_06_163624) do
     t.string "presentation"
     t.index ["email"], name: "index_benevoles_on_email", unique: true
     t.index ["reset_password_token"], name: "index_benevoles_on_reset_password_token", unique: true
+  end
+
+  create_table "benevoles_missions", id: false, force: :cascade do |t|
+    t.integer "benevole_id", null: false
+    t.integer "mission_id", null: false
+    t.index ["benevole_id"], name: "index_benevoles_missions_on_benevole_id"
+    t.index ["mission_id"], name: "index_benevoles_missions_on_mission_id"
   end
 
   create_table "missions", force: :cascade do |t|
