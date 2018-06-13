@@ -35,5 +35,10 @@
   <%= @mission.competences %>
 </p>
 
+<p>
+  <strong>Organisateur:</strong>
+  <%= @mission.creator.nom %>
+</p>
+
 <%= link_to 'Edit', edit_mission_path(@mission) %> |
 <%= link_to 'Back', missions_path %>
